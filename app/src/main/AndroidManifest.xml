@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jongjinbyun.hemsmobileappandroid8">
+
+    <!-- 인터넷 권한 주기(웹소켓) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/hems_min_start_ic_launcher"
+        android:label="HEMS"
+        android:roundIcon="@mipmap/hems_min_start_ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="HEMS">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Enroll_1_1_Activity" />
+        <activity android:name=".Enroll_1_2_Activity" />
+        <activity android:name=".Monitoring_2_1_Activity" />
+        <activity android:name=".Setting_3_0_Activity" />
+        <activity android:name=".Setting_3_1_Activity" />
+        <activity android:name=".Setting_3_2_Activity" />
+        <activity android:name=".Setting_3_3_Activity" />
+        <activity android:name=".Monitoring_2_2_Activity" />
+        <activity android:name=".Monitoring_2_3_Activity" />
+        <activity android:name=".Monitoring_2_4_Activity"></activity>
+    </application>
+
+</manifest>

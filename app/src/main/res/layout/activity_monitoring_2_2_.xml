@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    tools:context=".Monitoring_2_2_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/vppnet_symbol_logo" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="5" />
+
+            <ImageButton
+                android:id="@+id/ImgBtn_Home_monitoring_2_2"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#cccccc"
+                android:src="@drawable/hems_home_icon"
+                tools:src="@drawable/hems_home_icon" />
+
+        </LinearLayout>
+
+        <TextClock
+            android:id="@+id/textClockNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="#d41709"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:format12Hour="yyyy'년' MM'월' dd'일' hh:mm "
+            android:shadowRadius="5.0"
+            android:shadowDx="5.0"
+            android:shadowDy="5.0"
+            android:shadowColor="#162249"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textUnit"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:text="(Kw)"
+                    android:textColor="#162249"
+                    android:textSize="10dp"
+                    android:textStyle="bold"/>
+
+                <!--차트 API 사용-->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/btnSeeDetail"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/hems_monitoring_see_detail_icon"/>
+                <TextView
+                    android:id="@+id/textSeeDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="상세보기"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:paddingTop="5dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/hems_monitoring_kw_icon"/>
+                <TextView
+                    android:id="@+id/textKwTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="이번 달 누적발전량: "
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:id="@+id/textKw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"
+                    android:textColor="#e72e1e"
+                    android:text="500 KW"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/hems_monitoring_profits_icon"/>
+                <TextView
+                    android:id="@+id/textProfitsTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="이번 달 예상 수익: "
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:id="@+id/textProfits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"
+                    android:textColor="#e72e1e"
+                    android:text="1,000,000 KRW"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btnProfitCompare"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/hems_monitoring_before_profits_icon"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/textProfitCompare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="수익 비교"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/textSMP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15dp"
+                    android:textColor="#162249"
+                    android:paddingTop="20dp"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center|bottom"
+            android:text="(주)노츠"
+            android:textColor="#444444"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
