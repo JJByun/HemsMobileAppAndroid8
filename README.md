@@ -8,3 +8,7 @@
  1.UI by design project  
  2.dynamical Graph   
  3.Data storage  
+
+# App Doc, wire-frame, design project URL 
+http://naver.me/FWeZ7Rgz  
+PW:1234
