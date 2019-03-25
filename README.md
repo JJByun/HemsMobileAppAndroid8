@@ -12,3 +12,6 @@
 # App Doc, wire-frame, design project URL 
 http://naver.me/FWeZ7Rgz  
 PW:1234
+
+# Prototype execution video URL
+https://www.youtube.com/watch?v=x-sSVYjOgxE&t=3s
